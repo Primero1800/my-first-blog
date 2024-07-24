@@ -1,31 +1,60 @@
+{% load static %}
+
 <html>
     <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
         <title>Dead blog</title>
     </head>
     <body>
-        <div>
-            <h1><a href="/">Dead Blog</a></h1>
+        <div class="page-header">
+          <h1><a href="/">Dead Blog</a></h1>
         </div>
 
-        <div>
+
+        <div class="post">
             <p>published: 14.07.2014, 12:14</p>
             <h2><a href="">My first post</a></h2>
             <p>What's the fucking wonder. I write this text, but i don't understand why i do that. Better i 'd stay selling my beer, vodka, cigarettes and get a lot of money, than learn this fucking python and absolutely sucking django. Bastards....</p>
         </div>
 
-        <div>
+
+        <div class="post">
             <p>published: 24.07.2024, 12:14</p>
             <h2><a href="">My second post</a></h2>
             <p>ABla bla bla bla bla bla bla.. I got drunk and want to drink alcohol every day. I'm biber, redneck, i'm not a programmer nor developer. I'd rather builder or empty person with empty eyes.</p>
         </div>
-        
+ 
+
+
         {% for post in posts %}
-            <div>
+            <div class="post">
                 <p>published: {{ post.published_date }}</p>
                 <h2><a href="">{{ post.title }}</a></h2>
                 <p>{{ post.text|linebreaksbr }}</p>
             </div>
         {% endfor %}
+        
+        
+        
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for post in posts %}
+                        <div class="post">
+                            <div class="date">
+                                <p>published: {{ post.published_date }}</p>
+                            </div>
+                            <h1><a href="">{{ post.title }}</a></h1>
+                            <p>{{ post.text|linebreaksbr }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
         
     </body>
 </html>
