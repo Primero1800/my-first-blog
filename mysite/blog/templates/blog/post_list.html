@@ -18,6 +18,15 @@
             <h2><a href="">My second post</a></h2>
             <p>ABla bla bla bla bla bla bla.. I got drunk and want to drink alcohol every day. I'm biber, redneck, i'm not a programmer nor developer. I'd rather builder or empty person with empty eyes.</p>
         </div>
+        
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+        
     </body>
 </html>
 
