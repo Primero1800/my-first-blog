@@ -1,11 +1,11 @@
 body {
-    padding-left: 150px;
+    padding-left: 50px;
 }
 
 .page-header {
-    background-color: #ffffff;
+    background-color: #ff0000;
     margin-top: 50px;
-    padding: 20px 20px 20px 200px;
+    padding: 20px 20px 20px 50px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -15,7 +15,7 @@ body {
 }
 
 .content {
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 h1, h2, h3, h4 {
@@ -23,7 +23,7 @@ h1, h2, h3, h4 {
 }
 
 .date {
-    color: #828282;
+    color: #000000;
 }
 
 .save {
@@ -42,9 +42,9 @@ h1, h2, h3, h4 {
 }
 
 .post {
-    margin-bottom: 200px;
+    margin-bottom: 70px;
 }
 
 .post h2 a, .post h2 a:visited {
-    color: #00FF12;
+    color: #00FFFF;
 }
